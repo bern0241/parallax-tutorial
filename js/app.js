@@ -23,6 +23,8 @@ function update(cursorPosition)
 update(0);
 
 addEventListener("mousemove", (event) => {
+    if (timeline.isActive()) return;
+
     xValue = event.clientX - innerWidth / 2; //checks how far from middle
     yValue = event.clientY - innerHeight / 2; //checks how far from middle
 
@@ -58,7 +60,7 @@ timeline.to(bgImg, {
 
 timeline.to(".mountain_6", {
     duration: durationLoad,
-    top: 'calc(50% + 140px)',
+    top: 'calc(50% + 200px)',
     ease: easeLoad
 }, 1)
 
@@ -82,7 +84,7 @@ timeline.to(".mountain_3", {
 
 timeline.to(".mountain_2", {
     duration: durationLoad,
-    top: 'calc(50% + 110px)',
+    top: 'calc(50% + 120px)',
     ease: easeLoad
 }, 1)
 
@@ -97,8 +99,14 @@ timeline.from(".text h1", {
     duration: 2,
     ease: easeLoad
 }, 2.5)
-.from(".text h2", {
+
+timeline.from(".text h2", {
     y: -150,
+    opacity: 0,
+    duration: 1.5,
+}, 3)
+
+timeline.from(".hide", {
     opacity: 0,
     duration: 1.5,
 }, 3)
