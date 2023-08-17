@@ -10,6 +10,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+::selection {
+    background-color: #0b372dbb;
+}
+
 .logo {
     width: 100px;
 }
@@ -108,13 +112,17 @@ main {
     overflow: hidden;
 }
 
+.parallax {
+    pointer-events: none;
+}
+
 .bg-img {
     position: absolute;
     width: 1900px;
     height: auto;
     top: calc(50% + 90px);
     left: calc(50%);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 1;
 }
 
@@ -123,7 +131,7 @@ main {
     width: 1200px;
     top: calc(50% + 140px);
     left: calc(50% - 140px);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 2;
 }
 
@@ -132,7 +140,7 @@ main {
     width: 800px;
     top: calc(50% + 130px);
     left: calc(50% + 660px);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 3;
 }
 
@@ -141,7 +149,7 @@ main {
     width: 1200px;
     top: calc(50% + 340px);
     left: calc(50% + 80px);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 4;
 }
 
@@ -152,17 +160,18 @@ main {
     width: 800px;
     top: calc(50% - 130px);
     left: calc(50%);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 5;
+    display: none;
 }
 
 .text {
-    display: none;
+    pointer-events: auto;
     z-index: 5;
     position: absolute;
     top: calc(50% - 130px);
     left: 50%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -170,13 +179,13 @@ main {
 
 .text h2 {
     font-weight: 200;
-    font-size: 6.5rem;
+    font-size: 7.5rem;
     line-height: 0.88;
 }
 
 .text h1 {
     font-weight: 800;
-    font-size: 8rem;
+    font-size: 11rem;
     line-height: 0.88;
 }
 
@@ -188,7 +197,7 @@ main {
     width: 420px;
     top: calc(50% + 270px);
     left: calc(50% - 425px);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 6;
 }
 
@@ -197,7 +206,7 @@ main {
     width: 1490px;
     top: calc(50% + 110px);
     left: calc(50% + 0px);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 7;
 }
 
@@ -206,7 +215,7 @@ main {
     width: 1690px;
     top: calc(50% + 90px);
     left: calc(50% - 110px);
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 8;
 }
 
@@ -217,6 +226,7 @@ main {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .sun-rays {
@@ -226,4 +236,16 @@ main {
     height: 80%;
     right: 0;
     top: 0;
+    pointer-events: none;
+}
+
+.vignette {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.7));
+    pointer-events: none;
 }
