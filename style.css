@@ -8,6 +8,8 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 ::selection {
@@ -108,8 +110,22 @@ main {
     position: relative;
     background-color: #dff8e3;
     height: 100vh;
-    width: 100vw;
     overflow: hidden;
+    scroll-snap-align: start;
+}
+
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    background-color: #dff8e3;
+    scroll-snap-align: start;
+    background-color: red;
 }
 
 .parallax {
@@ -312,4 +328,13 @@ main {
     .text h2 {
         font-size: 2.6rem;
     }
+}
+
+
+img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
