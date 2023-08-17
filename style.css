@@ -111,6 +111,7 @@ main {
 .bg-img {
     position: absolute;
     width: 1900px;
+    height: auto;
     top: calc(50% + 150px);
     left: calc(50%);
     transform: translate(-50%, -50%);
@@ -119,8 +120,8 @@ main {
 
 .mountain_6 {
     position: absolute;
-    width: 950px;
-    top: calc(50% + 120px);
+    width: 1000px;
+    top: calc(50% + 150px);
     left: calc(50% - 120px);
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -128,9 +129,45 @@ main {
 
 .mountain_5 {
     position: absolute;
-    width: 500px;
+    width: 700px;
     top: calc(50% + 180px);
-    left: calc(50% + 700px);
+    left: calc(50% + 650px);
     transform: translate(-50%, -50%);
     z-index: 3;
+}
+
+.mountain_4 {
+    position: absolute;
+    width: 950px;
+    top: calc(50% + 300px);
+    left: calc(50% + 190px);
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.mountain_3 {
+    position: absolute;
+    width: 330px;
+    top: calc(50% + 260px);
+    left: calc(50% - 386px);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.mountain_2 {
+    position: absolute;
+    width: 1190px;
+    top: calc(50% + 170px);
+    left: calc(50% + 190px);
+    transform: translate(-50%, -50%);
+    z-index: 6;
+}
+
+.mountain_1 {
+    position: absolute;
+    width: 1590px;
+    top: calc(50% + 90px);
+    left: calc(50% - 160px);
+    transform: translate(-50%, -50%);
+    z-index: 7;
 }
