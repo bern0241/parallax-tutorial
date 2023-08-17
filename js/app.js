@@ -118,3 +118,34 @@ timeline.from(".hide", {
     opacity: 0,
     duration: 1.5,
 }, 3)
+
+
+
+// MOVE SCROLL DOWN
+let text = document.querySelector('.text');
+let mountain_6 = document.querySelector('.mountain_6');
+let mountain_5 = document.querySelector('.mountain_5');
+let mountain_4 = document.querySelector('.mountain_4');
+let mountain_3 = document.querySelector('.mountain_3');
+let mountain_2 = document.querySelector('.mountain_2');
+let mountain_1 = document.querySelector('.mountain_1');
+
+let mountain1Pos = getComputedStyle(mountain_1).getPropertyValue('left');
+let mountain2Pos = getComputedStyle(mountain_2).getPropertyValue('left');
+let mountain3Pos = getComputedStyle(mountain_3).getPropertyValue('left');
+let mountain4Pos = getComputedStyle(mountain_4).getPropertyValue('left');
+let mountain5Pos = getComputedStyle(mountain_5).getPropertyValue('left');
+let mountain6Pos = getComputedStyle(mountain_6).getPropertyValue('left');
+
+addEventListener('scroll', () => {
+    let value = scrollY;
+    
+    text.style.marginTop = value * 2 + 'px';
+    // mountain_2.style.transform = value * 1.5 + 'px';
+    mountain_1.style.left = parseFloat(mountain1Pos) + value * -0.5 + 'px';
+    mountain_2.style.left = parseFloat(mountain2Pos) + value * 1 + 'px';
+    mountain_3.style.left = parseFloat(mountain3Pos) + value * -0.75 + 'px';
+    mountain_4.style.left = parseFloat(mountain4Pos) + value * 1 + 'px';
+    mountain_5.style.left = parseFloat(mountain5Pos) + value * 0.5 + 'px';
+    mountain_6.style.left = parseFloat(mountain6Pos) + value * -1 + 'px';
+})
