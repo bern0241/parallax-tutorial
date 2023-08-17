@@ -38,18 +38,67 @@ let timeline = gsap.timeline();
 // parallax_el.forEach((el) => {
 //     timeline.from(el, {
 //         // top: `${el.offsetHeight / 2 + el.dataset.distance}px`,
-//         top: `calc(50% + 90px)`,
-//         // top: '0px',
-//         duration: 1,
-//         delay: 1
+//         // top: `calc(50% + 90px)`,
+//         top: '2000px',
+//         duration: 2,
+//         delay: 2
 //     },
 // );
 // });
 
-timeline.to(".bg-img", {
-    // top: `${document.querySelector(".bg-img").offsetHeight / 2}px`,
-    duration: 1,
-    delay: 1,
-    top: `calc(50% + 90px)`,
+const durationLoad = 2.5;
+const easeLoad = "power3.out";
 
-})
+const bgImg = document.querySelector('.bg-img');
+timeline.to(bgImg, {
+    duration: durationLoad,
+    top: `calc(50% + 260px)`,
+    ease: easeLoad
+}, 1);
+
+timeline.to(".mountain_6", {
+    duration: durationLoad,
+    top: 'calc(50% + 140px)',
+    ease: easeLoad
+}, 1)
+
+timeline.to(".mountain_5", {
+    duration: durationLoad,
+    top: 'calc(50% + 130px)',
+    ease: easeLoad
+}, 1)
+
+timeline.to(".mountain_4", {
+    duration: durationLoad,
+    top: 'calc(50% + 340px)',
+    ease: easeLoad
+}, 1)
+
+timeline.to(".mountain_3", {
+    duration: durationLoad,
+    top: 'calc(50% + 270px)',
+    ease: easeLoad
+}, 1)
+
+timeline.to(".mountain_2", {
+    duration: durationLoad,
+    top: 'calc(50% + 110px)',
+    ease: easeLoad
+}, 1)
+
+timeline.to(".mountain_1", {
+    duration: durationLoad,
+    top: 'calc(50% + 90px)',
+    ease: easeLoad
+}, 1)
+
+timeline.from(".text h1", {
+    y: (innerHeight - document.querySelector(".text h1").getBoundingClientRect().top) + 200,
+    duration: 2,
+    ease: easeLoad
+}, 2.5)
+.from(".text h2", {
+    y: -150,
+    opacity: 0,
+    duration: 1.5,
+}, 3)
