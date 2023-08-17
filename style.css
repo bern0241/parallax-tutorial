@@ -145,13 +145,51 @@ main {
     z-index: 4;
 }
 
+
+
+.justin-text {
+    position: absolute;
+    width: 500px;
+    top: calc(50% - 130px);
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.text {
+    display: none;
+    z-index: 5;
+    position: absolute;
+    top: calc(50% - 130px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.text h2 {
+    font-weight: 200;
+    font-size: 6.5rem;
+    line-height: 0.88;
+}
+
+.text h1 {
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 0.88;
+}
+
+
+
+
 .mountain_3 {
     position: absolute;
     width: 400px;
     top: calc(50% + 270px);
     left: calc(50% - 430px);
     transform: translate(-50%, -50%);
-    z-index: 5;
+    z-index: 6;
 }
 
 .mountain_2 {
@@ -160,7 +198,7 @@ main {
     top: calc(50% + 110px);
     left: calc(50% + 85px);
     transform: translate(-50%, -50%);
-    z-index: 6;
+    z-index: 7;
 }
 
 .mountain_1 {
@@ -169,5 +207,23 @@ main {
     top: calc(50% + 90px);
     left: calc(50% - 160px);
     transform: translate(-50%, -50%);
-    z-index: 7;
+    z-index: 8;
+}
+
+.black-shadow {
+    position: absolute;
+    z-index: 19;
+    width: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.sun-rays {
+    position: absolute;
+    z-index: 19;
+    width: 60%;
+    height: 80%;
+    right: 0;
+    top: 0;
 }
