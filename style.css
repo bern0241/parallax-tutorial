@@ -114,6 +114,7 @@ main {
 
 .parallax {
     pointer-events: none;
+    transition: 0.45s cubic-bezier(.2, .49, .32, .99);
 }
 
 .bg-img {
@@ -179,13 +180,13 @@ main {
 
 .text h2 {
     font-weight: 200;
-    font-size: 7.5rem;
+    font-size: 6.5rem;
     line-height: 0.88;
 }
 
 .text h1 {
     font-weight: 800;
-    font-size: 11rem;
+    font-size: 9rem;
     line-height: 0.88;
 }
 

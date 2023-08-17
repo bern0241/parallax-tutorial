@@ -8,7 +8,9 @@ addEventListener("mousemove", (event) => {
 
     // console.log(xValue, yValue);
     parallax_el.forEach(el => {
-        // el.style.transform = `translate(calc(-50% + ${xValue}px, (calc(-50% + ${yValue}px))`;
-        el.style.transform = `translateX(calc(-50% + ${-xValue}px)) translateY(calc(-50% + ${yValue}px))`;
+        let speedx = el.dataset.speedx;
+        let speedy = el.dataset.speedy;
+        // let speedx = 1;
+        el.style.transform = `translateX(calc(-50% + ${-xValue * speedx}px)) translateY(calc(-50% + ${yValue * speedy}px))`;
     })
 })
